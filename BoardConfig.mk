@@ -15,11 +15,11 @@
 # limitations under the License.
 #
 
-# Use config from common t0lte
+# Use BoardConfig and system.prop from common t0lte
 -include device/samsung/t0lte/BoardConfig.mk
+TARGET_SYSTEM_PROP += device/samsung/t0lte/system.prop
 
 # Use t0ltekor defconfig. Needs CONFIG_MACH_T0_KOR_SKT=y and CONFIG_TARGET_LOCALE_KOR=y.
-TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 TARGET_KERNEL_CONFIG := lineageos_t0ltekor_defconfig
 
 # Assert
