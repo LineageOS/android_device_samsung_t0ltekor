@@ -15,14 +15,10 @@
 # limitations under the License.
 #
 
-# This variable is set first, so it can be overridden
-# by BoardConfigVendor.mk
--include device/samsung/smdk4412-common/BoardCommonConfig.mk
--include device/samsung/smdk4412-qcom-common/BoardCommonConfig.mk
--include device/samsung/t0lte/BoardCommonConfig.mk
+# Use config from common t0lte
+-include device/samsung/t0lte/BoardConfig.mk
 
-# Use special kernel config for t0ltekor
-# Needs CONFIG_MACH_T0_KOR_SKT=y and CONFIG_TARGET_LOCALE_KOR=y
+# Use t0ltekor defconfig. Needs CONFIG_MACH_T0_KOR_SKT=y and CONFIG_TARGET_LOCALE_KOR=y.
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
 TARGET_KERNEL_CONFIG := lineageos_t0ltekor_defconfig
 
@@ -32,10 +28,4 @@ TARGET_OTA_ASSERT_DEVICE := t0lte,t0ltekor,t0lteskt,t0ltektt,t0ltelgt
 # Init
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_t0ltekor
-
-# GPS
-BOARD_GPS_SET_PRIVACY := true
-
-# inherit from the proprietary version
--include vendor/samsung/t0lte/BoardConfigVendor.mk
 
