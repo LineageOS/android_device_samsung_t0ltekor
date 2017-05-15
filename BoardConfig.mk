@@ -24,7 +24,3 @@ TARGET_KERNEL_CONFIG := lineageos_t0ltekor_defconfig
 # Assert
 TARGET_OTA_ASSERT_DEVICE := t0lte,t0ltekor,t0lteskt,t0ltektt,t0ltelgt
 
-# Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_t0ltekor
-
